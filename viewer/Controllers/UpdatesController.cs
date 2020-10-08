@@ -52,7 +52,7 @@ namespace viewer.Controllers
                 var webhookRequestCallback = HttpContext.Request.Headers["WebHook-Request-Callback"];
                 var webhookRequestRate = HttpContext.Request.Headers["WebHook-Request-Rate"];
                 HttpContext.Response.Headers.Add("WebHook-Allowed-Rate", "*");
-                HttpContext.Response.Headers.Add("WebHook-Allowed-Origin", webhookRequestOrigin);
+                HttpContext.Response.Headers.Add("WebHook-Allowed-Origin", "*");
             }
 
             return Ok();
